@@ -1,23 +1,23 @@
 package com.lc.geometry;
 
 public class Point {
-    double x=0;
-    double y =0;
+    double x=-1;
+    double y =-1;
 
-
-    public Double distanceFromPoint(Point pt){
-        return Math.sqrt(Math.abs(Math.pow(this.x - pt.x,2) - Math.pow(this.y - pt.y,2)));
+    public Double distanceFromPoint(){
+        return Math.abs(Math.sqrt(x*x + y*y));
     }
 
     public Point(int x, int y){
         this.x = x;
         this.y = y;
+
     }
 
 
 
     public String toString(){
-        return this.x+" " + this.y + " " + distanceFromPoint(new Point(0,0)) ;
+        return "\n"+this.x+" " + this.y + " " +  Math.abs(Math.sqrt(x*x + y*y)) ;
     }
 
 }
